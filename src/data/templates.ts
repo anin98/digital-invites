@@ -26,6 +26,7 @@ export const templates: Template[] = [
     name: 'Romantic Wedding',
     category: 'wedding',
     emoji: '💒',
+    video: '/wedding.mp4',
     hueA: 320,
     hueB: 350,
     description: 'A romantic and timeless wedding invitation',
@@ -35,18 +36,20 @@ export const templates: Template[] = [
     name: 'Modern Corporate',
     category: 'corporate',
     emoji: '🏢',
+    video: '/corporate.mp4',
     hueA: 200,
     hueB: 240,
     description: 'Professional corporate event invitation',
   },
   {
-    id: 'kids-party',
-    name: 'Fun Kids Party',
+    id: 'hangout',
+    name: 'Hangout',
     category: 'kids',
     emoji: '🎈',
+    video: '/hangout.mp4',
     hueA: 40,
     hueB: 80,
-    description: 'Colorful and fun invitation for kids parties',
+    description: 'Colorful and fun invitation for hangouts',
   },
 ];
 
@@ -54,5 +57,5 @@ export const categories = [
   { id: 'birthday', name: 'Birthday', emoji: '🎂' },
   { id: 'wedding', name: 'Wedding', emoji: '💒' },
   { id: 'corporate', name: 'Corporate', emoji: '🏢' },
-  { id: 'kids', name: 'Kids Party', emoji: '🎈' },
+  { id: 'kids', name: 'Hangout', emoji: '🎈' },
 ];

@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
+// @ts-expect-error - three types not needed for vanta
+import * as THREE from 'three';
+// @ts-expect-error - vanta doesn't have type definitions
+import BIRDS from 'vanta/dist/vanta.birds.min';
 import './Hero.css';
 
 export default function Hero() {
@@ -8,7 +12,42 @@ export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const floatingRef = useRef<HTMLDivElement>(null);
+  const vantaRef = useRef<{ destroy: () => void } | null>(null);
+
+  useEffect(() => {
+    // Initialize Vanta.js Waves effect (doesn't require THREE.js)
+    if (heroRef.current && !vantaRef.current) {
+      vantaRef.current = BIRDS({
+        el: heroRef.current,
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundColor: 0x111111,
+        color1: 0xff6b9d,
+        color2: 0x9d4edd,
+        colorMode: 'lerp',
+        birdSize: 1.2,
+        wingSpan: 25.0,
+        speedLimit: 4.0,
+        separation: 60.0,
+        alignment: 40.0,
+        cohesion: 40.0,
+        quantity: 3.0,
+      });
+    }
+
+    return () => {
+      if (vantaRef.current) {
+        vantaRef.current.destroy();
+        vantaRef.current = null;
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -42,21 +81,6 @@ export default function Hero() {
           },
           '-=0.4'
         );
-
-      // Floating elements animation
-      gsap.to(floatingRef.current?.querySelectorAll('.floating-element') || [], {
-        y: 'random(-20, 20)',
-        x: 'random(-10, 10)',
-        rotation: 'random(-15, 15)',
-        duration: 'random(2, 4)',
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        stagger: {
-          each: 0.2,
-          from: 'random',
-        },
-      });
     });
 
     return () => ctx.revert();
@@ -64,21 +88,6 @@ export default function Hero() {
 
   return (
     <section ref={heroRef} className="hero">
-      <div className="hero-background">
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
-      </div>
-
-      <div ref={floatingRef} className="floating-elements">
-        <span className="floating-element">🎉</span>
-        <span className="floating-element">💐</span>
-        <span className="floating-element">🎊</span>
-        <span className="floating-element">💍</span>
-        <span className="floating-element">🎈</span>
-        <span className="floating-element">🎁</span>
-      </div>
-
       <div className="hero-content">
         <h1 ref={titleRef} className="hero-title">
           Create Stunning
@@ -86,7 +95,7 @@ export default function Hero() {
         </h1>
         <p ref={subtitleRef} className="hero-subtitle">
           Design beautiful invitations for any occasion. From birthdays to weddings,
-          corporate events to kids' parties - make every celebration memorable.
+          corporate events to parties - make every celebration memorable.
         </p>
         <div ref={ctaRef} className="hero-cta">
           <Link to="/templates" className="btn btn-primary">

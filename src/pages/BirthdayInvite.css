@@ -1,0 +1,905 @@
+/* Birthday Invite - Premium Elegant RSVP Page with Lottie Animations */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.birthday-invite {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1215 50%, #0d0d0d 100%);
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section */
+.invite-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  padding-top: 4rem;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(199, 112, 150, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+/* Confetti Decorations - Both Sides */
+.confetti-decorations {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.confetti-decoration {
+  position: absolute;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+}
+
+.confetti-left {
+  top: 20%;
+  left: -20px;
+  transform: scaleX(-1);
+}
+
+.confetti-right {
+  top: 20%;
+  right: -20px;
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invite-pretext {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: rgba(212, 175, 55, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.invite-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  perspective: 500px;
+}
+
+.invite-title .char {
+  display: inline-block;
+  transform-style: preserve-3d;
+  background: linear-gradient(180deg, #ffffff 0%, #d4af37 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.invite-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+/* Hero Cake Lottie - Centered */
+.hero-cake-lottie {
+  margin: 1rem auto;
+  filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.4));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Date Badge */
+.date-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 3rem;
+  margin-top: 0.5rem;
+}
+
+.badge-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+.date-day {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #d4af37;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.date-month {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.date-year {
+  font-size: 0.9rem;
+  color: rgba(212, 175, 55, 0.7);
+  letter-spacing: 4px;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll Indicator - Below Date Badge */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+  margin-top: 2rem;
+}
+
+.scroll-indicator span {
+  font-size: 0.75rem;
+  color: rgba(212, 175, 55, 0.6);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, #d4af37, transparent);
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 1; height: 40px; }
+  50% { opacity: 0.5; height: 60px; }
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+/* Event Details Section */
+.event-details {
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Two Column Grid for When & Where */
+.details-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+}
+
+.detail-card {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.detail-card:hover::before {
+  opacity: 1;
+}
+
+.card-lottie {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  color: rgba(212, 175, 55, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.detail-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.detail-sub {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+/* RSVP Button Section */
+.rsvp-button-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem 4rem;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.rsvp-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.rsvp-btn:hover {
+  background: #d4af37;
+  color: #0d0d0d;
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.4);
+  transform: scale(1.02);
+}
+
+.rsvp-btn:hover::before {
+  left: 100%;
+}
+
+/* Inviteflow Footer */
+.inviteflow-footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+.inviteflow-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.inviteflow-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.inviteflow-logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.inviteflow-text {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+}
+
+.inviteflow-text strong {
+  color: rgba(212, 175, 55, 0.7);
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .invite-hero {
+    padding: 1.5rem;
+    padding-top: 3rem;
+  }
+
+  .confetti-decoration {
+    transform: scale(0.8);
+  }
+
+  .confetti-left {
+    left: -40px;
+    transform: scale(0.8) scaleX(-1);
+  }
+
+  .confetti-right {
+    right: -40px;
+    transform: scale(0.8);
+  }
+
+  .invite-pretext {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+
+  .invite-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-cake-lottie {
+    transform: scale(0.85);
+  }
+
+  .date-day {
+    font-size: 3.5rem;
+  }
+
+  .date-month {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+  }
+
+  .event-details {
+    padding: 4rem 1.5rem;
+  }
+
+  .details-grid-two {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .detail-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .rsvp-btn {
+    padding: 1.25rem 3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .confetti-decorations {
+    opacity: 0.7;
+  }
+
+  .confetti-decoration {
+    transform: scale(0.6);
+  }
+
+  .confetti-left {
+    left: -60px;
+    transform: scale(0.6) scaleX(-1);
+  }
+
+  .confetti-right {
+    right: -60px;
+    transform: scale(0.6);
+  }
+
+  .detail-card {
+    padding: 1.5rem;
+  }
+
+  .detail-main {
+    font-size: 1.3rem;
+  }
+
+  .rsvp-btn {
+    padding: 1rem 2.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  .inviteflow-brand {
+    gap: 0.5rem;
+  }
+
+  .inviteflow-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Customizer Toggle Button */
+.customizer-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #d4af37);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.customizer-toggle:hover {
+  background: var(--theme-primary, #d4af37);
+  color: #0d0d0d;
+  transform: scale(1.1);
+}
+
+/* Customizer Sidebar */
+.customizer-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100vh;
+  background: rgba(15, 15, 15, 0.98);
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+  z-index: 999;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  backdrop-filter: blur(20px);
+}
+
+.customizer-sidebar.open {
+  right: 0;
+}
+
+.customizer-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.98);
+  z-index: 1;
+}
+
+.customizer-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--theme-primary, #d4af37);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.customizer-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.customizer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.customizer-section label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.customizer-section input[type="text"],
+.customizer-section input[type="date"],
+.customizer-section input[type="time"],
+.customizer-section input[type="number"] {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.customizer-section input:focus {
+  outline: none;
+  border-color: var(--theme-primary, #d4af37);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.customizer-section input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Theme Options */
+.theme-options {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.theme-btn:hover {
+  transform: scale(1.15);
+}
+
+.theme-btn.active {
+  border-color: #fff;
+  box-shadow: 0 0 15px currentColor;
+}
+
+.theme-btn.active::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Tier Info */
+.tier-warning {
+  font-size: 0.75rem;
+  color: #e74c3c;
+  margin-top: 0.25rem;
+}
+
+.tier-warning .upgrade-link {
+  color: var(--theme-primary, #d4af37);
+  margin-left: 0.5rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tier-info {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.25rem;
+}
+
+/* Generate Link Button */
+.generate-link-btn {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--theme-primary, #d4af37);
+  border: none;
+  border-radius: 4px;
+  color: #0d0d0d;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.generate-link-btn:hover {
+  background: var(--theme-secondary, #b8860b);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Link Modal */
+.link-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.link-modal {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid var(--theme-primary, #d4af37);
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.link-modal h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--theme-primary, #d4af37);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.modal-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.link-display {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.link-display input {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+.link-display button {
+  padding: 0.875rem 1.5rem;
+  background: var(--theme-primary, #d4af37);
+  border: none;
+  border-radius: 4px;
+  color: #0d0d0d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.link-display button:hover {
+  background: var(--theme-secondary, #b8860b);
+}
+
+.modal-info {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-info p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Theme-aware colors */
+.birthday-invite {
+  --theme-primary: #d4af37;
+  --theme-secondary: #b8860b;
+}
+
+.invite-title .char {
+  background: linear-gradient(180deg, #ffffff 0%, var(--theme-primary, #d4af37) 50%, var(--theme-secondary, #b8860b) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.invite-pretext {
+  color: rgba(var(--theme-primary, #d4af37), 0.8);
+}
+
+.date-day {
+  color: var(--theme-primary, #d4af37);
+}
+
+.date-year {
+  color: var(--theme-primary, #d4af37);
+  opacity: 0.7;
+}
+
+.badge-glow {
+  background: radial-gradient(circle, color-mix(in srgb, var(--theme-primary, #d4af37) 20%, transparent) 0%, transparent 70%);
+}
+
+.detail-card {
+  border-color: color-mix(in srgb, var(--theme-primary, #d4af37) 15%, transparent);
+}
+
+.detail-card:hover {
+  border-color: color-mix(in srgb, var(--theme-primary, #d4af37) 30%, transparent);
+}
+
+.card-content h3 {
+  color: var(--theme-primary, #d4af37);
+  opacity: 0.9;
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, transparent, var(--theme-primary, #d4af37), transparent);
+}
+
+.rsvp-btn {
+  border-color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #d4af37);
+}
+
+.rsvp-btn:hover {
+  background: var(--theme-primary, #d4af37);
+  box-shadow: 0 0 50px color-mix(in srgb, var(--theme-primary, #d4af37) 40%, transparent);
+}
+
+.inviteflow-text strong {
+  color: var(--theme-primary, #d4af37);
+  opacity: 0.7;
+}
+
+/* Responsive for customizer */
+@media (max-width: 768px) {
+  .customizer-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .customizer-toggle {
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .link-modal {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .link-display {
+    flex-direction: column;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+.birthday-invite::-webkit-scrollbar {
+  width: 4px;
+}
+
+.birthday-invite::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+.birthday-invite::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 2px;
+}
