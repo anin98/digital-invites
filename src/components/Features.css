@@ -44,7 +44,7 @@
 .feature-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-color);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(197, 186, 255, 0.25);
 }
 
 .feature-icon {

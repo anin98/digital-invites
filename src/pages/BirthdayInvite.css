@@ -4,7 +4,7 @@
 
 .birthday-invite {
   min-height: 100vh;
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1215 50%, #0d0d0d 100%);
+  background: linear-gradient(180deg, #FBFBFB 0%, #E8F9FF 50%, #FBFBFB 100%);
   position: relative;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
@@ -30,9 +30,9 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(199, 112, 150, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+    radial-gradient(ellipse at 30% 20%, rgba(197, 186, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(196, 217, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(232, 249, 255, 0.3) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -47,7 +47,7 @@
 
 .confetti-decoration {
   position: absolute;
-  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+  filter: drop-shadow(0 0 20px rgba(197, 186, 255, 0.3));
 }
 
 .confetti-left {
@@ -75,7 +75,7 @@
 .invite-pretext {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
-  color: rgba(212, 175, 55, 0.8);
+  color: #7c6cbf;
   text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 1rem;
@@ -86,7 +86,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 300;
-  color: #fff;
+  color: #1a1a2e;
   margin-bottom: 1rem;
   line-height: 1.1;
   letter-spacing: 2px;
@@ -96,7 +96,7 @@
 .invite-title .char {
   display: inline-block;
   transform-style: preserve-3d;
-  background: linear-gradient(180deg, #ffffff 0%, #d4af37 50%, #b8860b 100%);
+  background: linear-gradient(180deg, #1a1a2e 0%, #C5BAFF 50%, #7c6cbf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -105,7 +105,7 @@
 .invite-subtitle {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #5a6077;
   font-weight: 300;
   font-style: italic;
   margin-bottom: 1.5rem;
@@ -115,7 +115,7 @@
 /* Hero Cake Lottie - Centered */
 .hero-cake-lottie {
   margin: 1rem auto;
-  filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.4));
+  filter: drop-shadow(0 0 40px rgba(197, 186, 255, 0.4));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +138,7 @@
   transform: translate(-50%, -50%);
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(197, 186, 255, 0.25) 0%, transparent 70%);
   border-radius: 50%;
   animation: pulse-glow 3s ease-in-out infinite;
 }
@@ -152,7 +152,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 4.5rem;
   font-weight: 300;
-  color: #d4af37;
+  color: #7c6cbf;
   line-height: 1;
   position: relative;
   z-index: 1;
@@ -161,7 +161,7 @@
 .date-month {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #1a1a2e;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -171,7 +171,7 @@
 
 .date-year {
   font-size: 0.9rem;
-  color: rgba(212, 175, 55, 0.7);
+  color: #7c6cbf;
   letter-spacing: 4px;
   margin-top: 0.5rem;
   position: relative;
@@ -190,7 +190,7 @@
 
 .scroll-indicator span {
   font-size: 0.75rem;
-  color: rgba(212, 175, 55, 0.6);
+  color: #7c6cbf;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -198,7 +198,7 @@
 .scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(180deg, #d4af37, transparent);
+  background: linear-gradient(180deg, #C5BAFF, transparent);
   animation: scroll-pulse 2s ease-in-out infinite;
 }
 
@@ -213,7 +213,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 3.5rem;
-  color: #fff;
+  color: #1a1a2e;
   font-weight: 300;
   letter-spacing: 4px;
   position: relative;
@@ -227,7 +227,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  background: linear-gradient(90deg, transparent, #C5BAFF, transparent);
 }
 
 /* Event Details Section */
@@ -252,8 +252,8 @@
 }
 
 .detail-card {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  background: linear-gradient(135deg, rgba(197, 186, 255, 0.1) 0%, rgba(232, 249, 255, 0.3) 100%);
+  border: 1px solid rgba(197, 186, 255, 0.25);
   border-radius: 4px;
   padding: 2.5rem 2rem;
   text-align: center;
@@ -269,15 +269,15 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  background: linear-gradient(90deg, transparent, #C5BAFF, transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .detail-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 30px 60px rgba(197, 186, 255, 0.2);
+  border-color: rgba(197, 186, 255, 0.4);
 }
 
 .detail-card:hover::before {
@@ -293,7 +293,7 @@
 .card-content h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.9rem;
-  color: rgba(212, 175, 55, 0.9);
+  color: #7c6cbf;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 1rem;
@@ -303,14 +303,14 @@
 .detail-main {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: #fff;
+  color: #1a1a2e;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 .detail-sub {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #5a6077;
   letter-spacing: 1px;
 }
 
@@ -329,8 +329,8 @@
   gap: 0.75rem;
   padding: 1.5rem 4rem;
   background: transparent;
-  border: 2px solid #d4af37;
-  color: #d4af37;
+  border: 2px solid #C5BAFF;
+  color: #7c6cbf;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -349,14 +349,14 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(197, 186, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
 .rsvp-btn:hover {
-  background: #d4af37;
-  color: #0d0d0d;
-  box-shadow: 0 0 50px rgba(212, 175, 55, 0.4);
+  background: #C5BAFF;
+  color: #1a1a2e;
+  box-shadow: 0 0 50px rgba(197, 186, 255, 0.4);
   transform: scale(1.02);
 }
 
@@ -370,7 +370,7 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  border-top: 1px solid rgba(212, 175, 55, 0.08);
+  border-top: 1px solid rgba(196, 217, 255, 0.3);
 }
 
 .inviteflow-brand {
@@ -394,12 +394,12 @@
 
 .inviteflow-text {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: #5a6077;
   letter-spacing: 1px;
 }
 
 .inviteflow-text strong {
-  color: rgba(212, 175, 55, 0.7);
+  color: #7c6cbf;
   font-weight: 500;
 }
 
@@ -516,9 +516,9 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(20, 20, 20, 0.9);
-  border: 1px solid var(--theme-primary, #d4af37);
-  color: var(--theme-primary, #d4af37);
+  background: rgba(251, 251, 251, 0.9);
+  border: 1px solid var(--theme-primary, #C5BAFF);
+  color: var(--theme-primary, #7c6cbf);
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -526,8 +526,8 @@
 }
 
 .customizer-toggle:hover {
-  background: var(--theme-primary, #d4af37);
-  color: #0d0d0d;
+  background: var(--theme-primary, #C5BAFF);
+  color: #1a1a2e;
   transform: scale(1.1);
 }
 
@@ -538,8 +538,8 @@
   right: -350px;
   width: 320px;
   height: 100vh;
-  background: rgba(15, 15, 15, 0.98);
-  border-left: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(251, 251, 251, 0.98);
+  border-left: 1px solid #C4D9FF;
   z-index: 999;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
@@ -552,17 +552,17 @@
 
 .customizer-header {
   padding: 1.5rem;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid #C4D9FF;
   position: sticky;
   top: 0;
-  background: rgba(15, 15, 15, 0.98);
+  background: rgba(251, 251, 251, 0.98);
   z-index: 1;
 }
 
 .customizer-header h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.4rem;
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
   font-weight: 400;
   letter-spacing: 2px;
   margin: 0;
@@ -583,7 +583,7 @@
 
 .customizer-section label {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #5a6077;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;
@@ -594,10 +594,10 @@
 .customizer-section input[type="time"],
 .customizer-section input[type="number"] {
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(232, 249, 255, 0.5);
+  border: 1px solid #C4D9FF;
   border-radius: 4px;
-  color: #fff;
+  color: #1a1a2e;
   font-size: 0.95rem;
   font-family: 'Montserrat', sans-serif;
   transition: all 0.3s ease;
@@ -605,12 +605,12 @@
 
 .customizer-section input:focus {
   outline: none;
-  border-color: var(--theme-primary, #d4af37);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--theme-primary, #C5BAFF);
+  background: rgba(197, 186, 255, 0.08);
 }
 
 .customizer-section input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: #8a8fa0;
 }
 
 /* Theme Options */
@@ -635,12 +635,12 @@
 }
 
 .theme-btn.active {
-  border-color: #fff;
+  border-color: #1a1a2e;
   box-shadow: 0 0 15px currentColor;
 }
 
 .theme-btn.active::after {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -658,7 +658,7 @@
 }
 
 .tier-warning .upgrade-link {
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
   margin-left: 0.5rem;
   cursor: pointer;
   text-decoration: underline;
@@ -666,7 +666,7 @@
 
 .tier-info {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #5a6077;
   margin-top: 0.25rem;
 }
 
@@ -674,10 +674,10 @@
 .generate-link-btn {
   margin-top: 1rem;
   padding: 1rem 1.5rem;
-  background: var(--theme-primary, #d4af37);
+  background: var(--theme-primary, #C5BAFF);
   border: none;
   border-radius: 4px;
-  color: #0d0d0d;
+  color: #1a1a2e;
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -688,9 +688,9 @@
 }
 
 .generate-link-btn:hover {
-  background: var(--theme-secondary, #b8860b);
+  background: var(--theme-secondary, #a99bef);
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(197, 186, 255, 0.3);
 }
 
 /* Link Modal */
@@ -700,7 +700,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(26, 26, 46, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -709,14 +709,14 @@
 }
 
 .link-modal {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 1px solid var(--theme-primary, #d4af37);
+  background: linear-gradient(135deg, #FBFBFB 0%, #E8F9FF 100%);
+  border: 1px solid var(--theme-primary, #C5BAFF);
   border-radius: 8px;
   padding: 2.5rem;
   max-width: 500px;
   width: 90%;
   position: relative;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 80px rgba(197, 186, 255, 0.3);
 }
 
 .modal-close {
@@ -727,28 +727,28 @@
   height: 35px;
   border-radius: 50%;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #C4D9FF;
+  color: #5a6077;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .modal-close:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(197, 186, 255, 0.15);
+  color: #1a1a2e;
 }
 
 .link-modal h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
 
 .modal-subtitle {
-  color: rgba(255, 255, 255, 0.6);
+  color: #5a6077;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -762,20 +762,20 @@
 .link-display input {
   flex: 1;
   padding: 0.875rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(232, 249, 255, 0.5);
+  border: 1px solid #C4D9FF;
   border-radius: 4px;
-  color: #fff;
+  color: #1a1a2e;
   font-size: 0.85rem;
   font-family: monospace;
 }
 
 .link-display button {
   padding: 0.875rem 1.5rem;
-  background: var(--theme-primary, #d4af37);
+  background: var(--theme-primary, #C5BAFF);
   border: none;
   border-radius: 4px;
-  color: #0d0d0d;
+  color: #1a1a2e;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -785,79 +785,79 @@
 }
 
 .link-display button:hover {
-  background: var(--theme-secondary, #b8860b);
+  background: var(--theme-secondary, #a99bef);
 }
 
 .modal-info {
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #C4D9FF;
 }
 
 .modal-info p {
-  color: rgba(255, 255, 255, 0.5);
+  color: #5a6077;
   font-size: 0.8rem;
   margin: 0;
 }
 
 /* Theme-aware colors */
 .birthday-invite {
-  --theme-primary: #d4af37;
-  --theme-secondary: #b8860b;
+  --theme-primary: #C5BAFF;
+  --theme-secondary: #a99bef;
 }
 
 .invite-title .char {
-  background: linear-gradient(180deg, #ffffff 0%, var(--theme-primary, #d4af37) 50%, var(--theme-secondary, #b8860b) 100%);
+  background: linear-gradient(180deg, #1a1a2e 0%, var(--theme-primary, #C5BAFF) 50%, var(--theme-secondary, #a99bef) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .invite-pretext {
-  color: rgba(var(--theme-primary, #d4af37), 0.8);
+  color: var(--theme-primary, #7c6cbf);
 }
 
 .date-day {
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
 }
 
 .date-year {
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
   opacity: 0.7;
 }
 
 .badge-glow {
-  background: radial-gradient(circle, color-mix(in srgb, var(--theme-primary, #d4af37) 20%, transparent) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--theme-primary, #C5BAFF) 20%, transparent) 0%, transparent 70%);
 }
 
 .detail-card {
-  border-color: color-mix(in srgb, var(--theme-primary, #d4af37) 15%, transparent);
+  border-color: color-mix(in srgb, var(--theme-primary, #C5BAFF) 15%, transparent);
 }
 
 .detail-card:hover {
-  border-color: color-mix(in srgb, var(--theme-primary, #d4af37) 30%, transparent);
+  border-color: color-mix(in srgb, var(--theme-primary, #C5BAFF) 30%, transparent);
 }
 
 .card-content h3 {
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
   opacity: 0.9;
 }
 
 .section-title::after {
-  background: linear-gradient(90deg, transparent, var(--theme-primary, #d4af37), transparent);
+  background: linear-gradient(90deg, transparent, var(--theme-primary, #C5BAFF), transparent);
 }
 
 .rsvp-btn {
-  border-color: var(--theme-primary, #d4af37);
-  color: var(--theme-primary, #d4af37);
+  border-color: var(--theme-primary, #C5BAFF);
+  color: var(--theme-primary, #7c6cbf);
 }
 
 .rsvp-btn:hover {
-  background: var(--theme-primary, #d4af37);
-  box-shadow: 0 0 50px color-mix(in srgb, var(--theme-primary, #d4af37) 40%, transparent);
+  background: var(--theme-primary, #C5BAFF);
+  box-shadow: 0 0 50px color-mix(in srgb, var(--theme-primary, #C5BAFF) 40%, transparent);
 }
 
 .inviteflow-text strong {
-  color: var(--theme-primary, #d4af37);
+  color: var(--theme-primary, #7c6cbf);
   opacity: 0.7;
 }
 
@@ -896,10 +896,10 @@ html {
 }
 
 .birthday-invite::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #FBFBFB;
 }
 
 .birthday-invite::-webkit-scrollbar-thumb {
-  background: #d4af37;
+  background: #C5BAFF;
   border-radius: 2px;
 }

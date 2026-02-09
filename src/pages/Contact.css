@@ -12,7 +12,7 @@
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  background: var(--gradient-1);
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -85,7 +85,7 @@
   padding: 1rem;
   border-radius: 50px;
   background: var(--gradient-1);
-  color: white;
+  color: #1a1a2e;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -93,7 +93,7 @@
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 30px rgba(197, 186, 255, 0.4);
 }
 
 /* Contact Info */

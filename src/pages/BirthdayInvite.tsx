@@ -13,11 +13,11 @@ const LOTTIE_ANIMATIONS = {
 
 // Background theme options
 const THEMES = [
-  { id: 'elegant-gold', name: 'Elegant Gold', primary: '#d4af37', secondary: '#b8860b', bg: 'linear-gradient(180deg, #0d0d0d 0%, #1a1215 50%, #0d0d0d 100%)' },
-  { id: 'rose-gold', name: 'Rose Gold', primary: '#e8b4b8', secondary: '#d4a5a5', bg: 'linear-gradient(180deg, #1a1012 0%, #2d1f24 50%, #1a1012 100%)' },
-  { id: 'royal-purple', name: 'Royal Purple', primary: '#9b59b6', secondary: '#8e44ad', bg: 'linear-gradient(180deg, #0d0d15 0%, #1a1525 50%, #0d0d15 100%)' },
-  { id: 'ocean-blue', name: 'Ocean Blue', primary: '#5dade2', secondary: '#3498db', bg: 'linear-gradient(180deg, #0a1520 0%, #152535 50%, #0a1520 100%)' },
-  { id: 'emerald', name: 'Emerald', primary: '#2ecc71', secondary: '#27ae60', bg: 'linear-gradient(180deg, #0a150d 0%, #152a1a 50%, #0a150d 100%)' },
+  { id: 'elegant-gold', name: 'Elegant Gold', primary: '#d4af37', secondary: '#b8860b', bg: 'linear-gradient(180deg, #FBFBFB 0%, #FFF8E7 50%, #FBFBFB 100%)' },
+  { id: 'rose-gold', name: 'Rose Gold', primary: '#e8b4b8', secondary: '#d4a5a5', bg: 'linear-gradient(180deg, #FBFBFB 0%, #FFF0F2 50%, #FBFBFB 100%)' },
+  { id: 'royal-purple', name: 'Royal Purple', primary: '#9b59b6', secondary: '#8e44ad', bg: 'linear-gradient(180deg, #FBFBFB 0%, #F3EEFF 50%, #FBFBFB 100%)' },
+  { id: 'ocean-blue', name: 'Ocean Blue', primary: '#5dade2', secondary: '#3498db', bg: 'linear-gradient(180deg, #FBFBFB 0%, #E8F9FF 50%, #FBFBFB 100%)' },
+  { id: 'emerald', name: 'Emerald', primary: '#2ecc71', secondary: '#27ae60', bg: 'linear-gradient(180deg, #FBFBFB 0%, #EAFFF2 50%, #FBFBFB 100%)' },
 ];
 
 const FREE_TIER_LIMIT = 30;

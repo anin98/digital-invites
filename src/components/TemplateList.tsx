@@ -1,38 +1,36 @@
 import * as motion from 'motion/react-client';
-import type { Variants } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { Card, Row, Col, Tag, Button } from 'antd';
 import { templates, type Template } from '../data/templates';
 import './TemplateList.css';
+
+const { Meta } = Card;
+
+const COVER_HEIGHT = 200;
 
 export default function TemplateList() {
   return (
     <section className="template-list-section">
-      <div className="section-header">
+      <div className="template-header">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-title"
+
         >
           Choose Your Template
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="section-subtitle"
-        >
-          Beautiful designs for every occasion
-        </motion.p>
+       
       </div>
 
-      <div className="template-cards-container">
+      <Row gutter={[24, 24]} justify="center">
         {templates.map((template, i) => (
-          <TemplateCard key={template.id} template={template} index={i} />
+          <Col xs={24} sm={12} lg={6} key={template.id}>
+            <TemplateCard template={template} index={i} />
+          </Col>
         ))}
-      </div>
+      </Row>
     </section>
   );
 }
@@ -43,94 +41,50 @@ interface TemplateCardProps {
 }
 
 function TemplateCard({ template, index }: TemplateCardProps) {
-  const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
-  const background = `linear-gradient(306deg, ${hue(template.hueA)}, ${hue(template.hueB)})`;
-
   return (
     <motion.div
-      className={`template-card-container template-card-${index}`}
-      style={cardContainerStyle}
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.8 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.15 }}
+      style={{ height: '100%' }}
     >
-      <div className="template-splash" style={{ ...splashStyle, background }} />
-      <motion.div
-        className="template-card"
-        style={cardStyle}
-        variants={cardVariants}
+      <Card
+        hoverable
+   
+       
+        cover={
+          template.video ? (
+            <video
+              src={template.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              draggable={false}
+              style={{ width: '100%', height: COVER_HEIGHT, objectFit: 'cover', display: 'block' }}
+            />
+          ) : (
+            <div style={{ width: '100%', height: COVER_HEIGHT, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '5rem', background: '#f5f5f5' }}>
+              {template.emoji}
+            </div>
+          )
+        }
       >
-        {template.video ? (
-          <video
-            className="template-video"
-            src={template.video}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        ) : (
-          <div className="template-emoji">{template.emoji}</div>
-        )}
-        <div className="template-info">
-          <span className="template-category">{template.category}</span>
-          <h3 className="template-name">{template.name}</h3>
-          <p className="template-description">{template.description}</p>
-          <Link to={`/template/${template.id}`} className="template-btn">
+        <Tag color="purple" style={{ marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+          {template.category}
+        </Tag>
+        <Meta
+          title={template.name}
+          description={template.description}
+          style={{paddingBottom: '16px'}}
+        />
+        <Link to={`/template/${template.id}`} style={{ marginTop: 'auto', paddingTop: 16 }}>
+          <Button variant='solid' block shape="round" color='pink'>
             Use Template
-          </Link>
-        </div>
-      </motion.div>
+          </Button>
+        </Link>
+      </Card>
     </motion.div>
   );
 }
-
-const cardVariants: Variants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: 'spring',
-      bounce: 0.4,
-      duration: 0.8,
-    },
-  },
-};
-
-const cardContainerStyle: React.CSSProperties = {
-  overflow: 'hidden',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  paddingTop: 20,
-  marginBottom: -120,
-};
-
-const splashStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  clipPath: `path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z")`,
-};
-
-const cardStyle: React.CSSProperties = {
-  width: 300,
-  height: 430,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignItems: 'center',
-  borderRadius: 20,
-  background: '#1a1a1a',
-  boxShadow:
-    '0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075)',
-  transformOrigin: '10% 60%',
-  padding: '2rem 1.5rem',
-  textAlign: 'center',
-};

@@ -27,9 +27,9 @@ export default function Hero() {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        backgroundColor: 0x111111,
-        color1: 0xff6b9d,
-        color2: 0x9d4edd,
+        backgroundColor: 0xF9F8F6,
+        color1: 0xFF8F8F,
+        color2: 0xB7A3E3,
         colorMode: 'lerp',
         birdSize: 1.2,
         wingSpan: 25.0,
@@ -87,7 +87,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="hero">
+    <section ref={heroRef} className="hero" style={{backgroundColor: '#F9F8F6 '}}>
       <div className="hero-content">
         <h1 ref={titleRef} className="hero-title">
           Create Stunning
